@@ -1,2 +1,2 @@
 # web-dev
-Repositório para eletiva de desenvolvimento web
+Repositório para eletiva Desenvolvimento de Sistemas Web.
