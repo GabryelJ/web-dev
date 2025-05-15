@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+}
+
+header > img{
+    width: 70px;
+    height: 70px;
+}
+
+header > span{
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+footer{
+    text-align: center;
+    padding: 10px 0 10px 0;
+
+}
