@@ -7,7 +7,7 @@
 </header>
 
 <style>
-    @import '../variables.css';
+    @import '../styles/variables.css';
     .header {
         width: 100%;
         height: 70px;
