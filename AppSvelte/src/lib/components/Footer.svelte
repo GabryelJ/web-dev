@@ -8,9 +8,11 @@
 <style>
     @import '../styles/variables.css';
     .footer {
+        display: flex;
         width: 100%;
         height: 50px;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
         background-color: var(--primary-color);
     }
     .span {
