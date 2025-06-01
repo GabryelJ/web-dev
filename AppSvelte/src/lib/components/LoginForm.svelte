@@ -8,13 +8,15 @@
 </script>
 
 <form class="login-container">
-    <Input label="Matrícula:" type="text" direction="column" bind:value={registratiomNumber} placeholder="Ex.: 202510033011"/>
-    <Input label="Senha:" type="password" direction="column" bind:value={password} placeholder="••••••••"/>
-    <hr>
+    <div class="inputs-container">
+        <Input label="Matrícula:" type="text" direction="column" labelLinkId="matricula" bind:value={registratiomNumber} placeholder="Ex.: 202510033011"/>
+        <Input label="Senha:" type="password" direction="column" labelLinkId="senha" bind:value={password} placeholder="••••••••"/>
+    </div>
     <div class="buttons">
-        <Button text="Entrar" type="submit" variant="primary" />
-        <Button text="Esqueci a Senha" type="button" variant="primary" />
-        <Button text="Cadastro" type="button" variant="primary" />
+        <Button text="Entrar" type="submit"/>
+        <hr>
+        <Button text="Esqueci minha senha" type="button"/>
+        <Button text="Cadastro" type="button"/>
     </div>
 </form>
 
@@ -26,6 +28,10 @@
         padding: 10px;
         border-radius: 10px;
         border: 1px solid black;
+    }
+
+    .inputs-container {
+        margin-bottom: 20px;
     }
 
     hr{

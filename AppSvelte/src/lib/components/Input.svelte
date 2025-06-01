@@ -3,13 +3,14 @@
     export let placeholder = 'Ex.: placeholder';
     export let type = 'text';
     export let direction = '';
+    export let labelLinkId = '';
 </script>
 
 <div class="labeled-input {direction}">
-    <label class="label" for="labeled">
+    <label class="label" for="{labelLinkId}">
         {label}
     </label>
-    <input class="input" id="labeled"
+    <input class="input" id="{labelLinkId}"
            {type}
            {placeholder}
     >
@@ -35,7 +36,7 @@
     .input {
         padding: 5px;
         font-size: 1rem;
-        width: 150px;
+        width: 100%;
         border-radius: 10px;
         border: 1px solid black;
         transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
