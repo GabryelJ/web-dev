@@ -1,4 +1,3 @@
-<!--TODO: funcionalidades-->
 <script>
     import Input from "$lib/components/Input.svelte";
     import Button from "$lib/components/Button.svelte";
