@@ -27,7 +27,7 @@
         background-color: var(--secondary-color);
         padding: 10px;
         border-radius: 10px;
-        border: 1px solid black;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     }
 
     .inputs-container {

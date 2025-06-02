@@ -15,7 +15,6 @@
 </button>
 
 <style>
-    /*TODO: pensar em tipos diferentes de personalização*/
     .button{
         padding: 5px;
         font-size: 1rem;
