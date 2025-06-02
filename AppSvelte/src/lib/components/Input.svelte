@@ -1,4 +1,5 @@
 <script>
+    export let value = "";
     export let label = 'legenda';
     export let placeholder = 'Ex.: placeholder';
     export let type = 'text';
@@ -13,10 +14,9 @@
     <input class="input" id="{labelLinkId}"
            {type}
            {placeholder}
+           bind:value
     >
 </div>
-
-
 
 <style>
     .labeled-input {
@@ -33,6 +33,7 @@
         font-weight: bold;
         font-size: 1rem;
     }
+
     .input {
         padding: 5px;
         font-size: 1rem;
@@ -41,6 +42,7 @@
         border: 1px solid black;
         transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
+
     .input:focus {
         box-shadow: 0 0 0 3px rgb(0, 128, 198);
     }

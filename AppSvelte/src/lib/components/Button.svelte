@@ -2,17 +2,30 @@
     export let text = 'Botão';
     export let type = 'button';
     export let disabled = false;
-    export let buttonOverWriteStyleClass = '';
+    export let variant = '';
+    export let href = undefined;
 </script>
 
-<button
-        {type}
-        class="button {buttonOverWriteStyleClass}"
-        on:click
-        {disabled}
->
-        {text}
-</button>
+{#if href}
+        <a
+                href={href}
+                class="button {variant}"
+                on:click
+                {disabled}
+        >
+                {text}
+        </a>
+{:else}
+
+        <button
+                {type}
+                class="button {variant}"
+                on:click
+                {disabled}
+        >
+                {text}
+        </button>
+{/if}
 
 <style>
     .button{
@@ -22,15 +35,26 @@
         border-radius: 10px;
         background-color: var(--secondary-color);
         transition: 0.5s ease-in-out;
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    a.button{
+            font-size: 1.1rem;
     }
 
     .button-card{
-            font-weight: bold;
             width: 100px;
             height: 100px;
+            text-align: center;
     }
 
-    button:disabled {
+    .button:disabled {
             opacity: 0.6;
             cursor: not-allowed;
             background-color: #cccccc;

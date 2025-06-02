@@ -2,17 +2,25 @@
     import Input from "$lib/components/Input.svelte";
     import Button from "$lib/components/Button.svelte";
 
-    let registratiomNumber = "";
-    let password = "";
+    export let registrationNumber = "";
+    export let password = "";
+
+    function isEmpty(field) {
+        return field.trim() === "";
+    }
+
+    $: loginDisabled = isEmpty(registrationNumber) || isEmpty(password);
+
 </script>
 
 <form class="login-container">
     <div class="inputs-container">
-        <Input label="Matrícula:" type="text" direction="column" labelLinkId="matricula" bind:value={registratiomNumber} placeholder="Ex.: 202510033011"/>
+        <Input label="Matrícula:" type="text" direction="column" labelLinkId="matricula" bind:value={registrationNumber} placeholder="Ex.: 202510033011"/>
         <Input label="Senha:" type="password" direction="column" labelLinkId="senha" bind:value={password} placeholder="••••••••"/>
     </div>
+
     <div class="buttons">
-        <Button text="Entrar" type="submit"/>
+        <Button text="Entrar" type="submit" disabled={loginDisabled}/>
         <hr>
         <Button text="Esqueci minha senha" type="button"/>
         <Button text="Cadastro" type="button"/>

@@ -15,11 +15,13 @@
         background-color: var(--primary-color);
         align-items: center;
     }
+
     .span {
         color: var(--secondary-color);
         font-size: 30px;
         font-weight: bold;
     }
+
     .logo{
         margin-left: 20px;
         margin-right: 20px;

@@ -22,8 +22,8 @@
     ];
 
     let schedule = {
-        "M5": { "Terça": "Matéria B", "Quinta": "Matéria B" },
-        "M6": { "Terça": "Matéria B", "Quinta": "Matéria B" },
+        "M5": { "Terça": "Matéria 1", "Quinta": "Matéria 1" },
+        "M6": { "Terça": "Matéria 1", "Quinta": "Matéria 1" },
     };
 </script>
 
