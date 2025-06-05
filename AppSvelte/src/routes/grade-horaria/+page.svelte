@@ -1,5 +1,4 @@
 <script>
-
 import ScheduleTable from "$lib/components/ScheduleTable.svelte";
 import Button from "$lib/components/Button.svelte";
 </script>

@@ -1,10 +1,12 @@
 <script>
-    export let value = "";
-    export let label = 'legenda';
-    export let placeholder = 'Ex.: placeholder';
-    export let type = 'text';
-    export let direction = '';
-    export let labelLinkId = '';
+    let {
+        value = "",
+        label = 'legenda',
+        placeholder = 'Ex.: placeholder',
+        type = 'text',
+        direction = '',
+        labelLinkId = ''
+    } = $props();
 </script>
 
 <div class="labeled-input {direction}">

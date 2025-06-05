@@ -65,7 +65,7 @@
 
     .time-label {
         font-weight: bold;
-        background-color: var(--secondary-color);
+        background-color: var(--secondary);
     }
 
 </style>

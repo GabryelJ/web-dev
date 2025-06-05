@@ -2,7 +2,7 @@
 </script>
 
 <header class="header">
-    <img class="logo" src="./images/logo.svg" alt="Logotipo smile">
+    <img class="logo" src="./images/logo.svg" alt="Logo">
     <span class="span">Happy Face Corp.</span>
 </header>
 
@@ -12,12 +12,12 @@
         width: 100%;
         height: 70px;
         display: flex;
-        background-color: var(--primary-color);
+        background-color: var(--primary);
         align-items: center;
     }
 
     .span {
-        color: var(--secondary-color);
+        color: var(--secondary);
         font-size: 30px;
         font-weight: bold;
     }

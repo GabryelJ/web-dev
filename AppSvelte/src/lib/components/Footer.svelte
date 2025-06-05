@@ -13,10 +13,10 @@
         height: 50px;
         justify-content: center;
         align-items: center;
-        background-color: var(--primary-color);
+        background-color: var(--primary);
     }
     .span {
-        color: var(--secondary-color);
+        color: var(--secondary);
         font-size: 1em;
         font-weight: bold;
     }

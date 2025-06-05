@@ -1,16 +1,15 @@
 <script>
-    export let status;
-    export let error;
-
-    import { page } from '$app/stores';
+    import { page } from '$app/state';
     import Button from '$lib/components/Button.svelte';
 
-    $: status = $page.status;
-    $: error = $page.error;
-    $: title = status === 404 ? 'Página Não Encontrada' : 'Erro Inesperado';
-    $: message = status === 404
-        ? 'A página que você tentou acessar não existe.'
-        : (error?.message || 'Algo deu errado.');
+    const status = $derived(page.status);
+    const error = $derived(page.error);
+    const title = $derived(page.status === 404 ? 'Página não encontrada' : 'Erro inesperado');
+    const message = $derived(
+        page.status === 404
+            ? 'A página que você tentou acessar não existe.'
+            : (page.error?.message || 'Algo deu errado.')
+    );
 </script>
 
 <main class="error-container">
@@ -22,7 +21,7 @@
             <pre>{error.stack}</pre>
         {/if}
 
-        <Button text="Voltar para a Página Inicial" href="/" />
+        <Button text="Voltar para a página inicial" href="/" />
     </div>
 </main>
 
@@ -47,7 +46,7 @@
     }
 
     h1 {
-        color: var(--primary-color);
+        color: var(--primary);
         font-size: 2.5rem;
         margin-bottom: 20px;
     }

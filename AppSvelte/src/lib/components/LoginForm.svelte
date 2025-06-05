@@ -2,14 +2,14 @@
     import Input from "$lib/components/Input.svelte";
     import Button from "$lib/components/Button.svelte";
 
-    export let registrationNumber = "";
-    export let password = "";
+    let registrationNumber = $state("");
+    let password = $state("");
 
     function isEmpty(field) {
         return field.trim() === "";
     }
 
-    $: loginDisabled = isEmpty(registrationNumber) || isEmpty(password);
+    let loginDisabled = $derived(isEmpty(registrationNumber) || isEmpty(password));
 
 </script>
 
@@ -31,7 +31,7 @@
     .login-container{
         display: flex;
         flex-direction: column;
-        background-color: var(--secondary-color);
+        background-color: var(--secondary);
         padding: 10px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);

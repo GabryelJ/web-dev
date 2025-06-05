@@ -23,7 +23,7 @@ main{
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
 }
 
 .login__form{
@@ -70,7 +70,7 @@ main{
 }
 
 .login__form button{
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     padding: 5px;
     border-radius: 10px;
     margin-right: auto;
@@ -80,7 +80,7 @@ main{
 }
 
 .login__form button:hover{
-    background-color: var(--secondary-color);
+    background-color: var(--secondary);
     transform: scale(0.96);
     box-shadow: 0 1px 0 #575353;
 }
