@@ -1,6 +1,6 @@
 <script>
     let {
-        value = "",
+        value = $bindable(""),
         label = 'legenda',
         placeholder = 'Ex.: placeholder',
         type = 'text',

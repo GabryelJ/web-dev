@@ -15,8 +15,8 @@
 
 <form class="login-container">
     <div class="inputs-container">
-        <Input label="Matrícula:" type="text" direction="column" labelLinkId="matricula" bind:value={registrationNumber} placeholder="Ex.: 202510033011"/>
-        <Input label="Senha:" type="password" direction="column" labelLinkId="senha" bind:value={password} placeholder="••••••••"/>
+        <Input label="Matrícula:" type="text" direction="column" labelLinkId="matricula" bind:value={registrationNumber} placeholder="Insira sua matrícula"/>
+        <Input label="Senha:" type="password" direction="column" labelLinkId="senha" bind:value={password} placeholder="Insira sua senha"/>
     </div>
 
     <div class="buttons">

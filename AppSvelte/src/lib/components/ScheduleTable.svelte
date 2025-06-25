@@ -1,71 +1,270 @@
 <script>
-    const days = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
-
-    const times = [
-        { id: "M1", label: "M1 (07:00 - 07:50)" },
-        { id: "M2", label: "M2 (07:50 - 08:40)" },
-        { id: "M3", label: "M3 (08:50 - 09:40)" },
-        { id: "M4", label: "M4 (09:40 - 10:30)" },
-        { id: "M5", label: "M5 (10:40 - 11:30)" },
-        { id: "M6", label: "M6 (11:30 - 12:20)" },
-        { id: "T1", label: "T1 (12:30 - 13:20)" },
-        { id: "T2", label: "T2 (13:20 - 14:10)" },
-        { id: "T3", label: "T3 (14:20 - 15:10)" },
-        { id: "T4", label: "T4 (15:10 - 16:00)" },
-        { id: "T5", label: "T5 (16:10 - 17:00)" },
-        { id: "T6", label: "T6 (17:00 - 17:50)" },
-        { id: "N1", label: "N1 (18:00 - 18:50)" },
-        { id: "N2", label: "N2 (18:50 - 19:40)" },
-        { id: "N3", label: "N3 (19:40 - 20:30)" },
-        { id: "N4", label: "N4 (20:30 - 21:20)" },
-        { id: "N5", label: "N5 (21:20 - 22:10)" },
-    ];
-
-    let schedule = {
-        "M5": { "Terça": "Matéria 1", "Quinta": "Matéria 1" },
-        "M6": { "Terça": "Matéria 1", "Quinta": "Matéria 1" },
-    };
+    const scheduleJson = {
+        "turmas":[
+        {
+            "codigo":"ABC99-00001",
+            "nome":"Introdução a apertar botão",
+            "turma":1,
+            "horarios":[
+                "SEG M1M2",
+                "QUA M1M2"
+            ]
+        },
+        {
+            "codigo":"ABC99-00002",
+            "nome":"Introdução a impressoras",
+            "turma":1,
+            "horarios":[
+                "TER M1M2",
+                "QUI M1M2"
+            ]
+        },
+        {
+            "codigo":"ABC99-00003",
+            "nome":"Introdução a ar-condicionado",
+            "turma":1,
+            "horarios":[
+                "TER M3M4",
+                "SEX M3M4"
+            ]
+        },
+        {
+            "codigo":"ABC99-00004",
+            "nome":"Interpretação de códigos de erro",
+            "turma":1,
+            "horarios":[
+                "SEG M3M4",
+                "SEX M1M2"
+            ]
+        }
+    ]
+    }
 </script>
 
-
-<table>
-    <thead>
-    <tr>
-        <th>Tempo</th>
-        {#each days as day}
-            <th>{day}</th>
-        {/each}
-    </tr>
-    </thead>
-    <tbody>
-    {#each times as time}
-        <tr>
-            <td class="time-label">{time.label}</td>
-            {#each days as day}
-                <td class:cell-filled={schedule[time.id]?.[day]}>
-                    {schedule[time.id]?.[day]}
-                </td>
-            {/each}
-        </tr>
-    {/each}
-    </tbody>
-</table>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tempo</th>
+                <th>Segunda</th>
+                <th>Terça</th>
+                <th>Quarta</th>
+                <th>Quinta</th>
+                <th>Sexta</th>
+                <th>Sábado</th>
+                <th>Domingo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time">M1 (07:00 - 07:50)</td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+            </tr>
+            <tr>
+                <td class="time">M2 (07:50 - 08:40)</td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+            </tr>
+            <tr>
+                <td class="time">M3 (08:50 - 09:40)</td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+            </tr>
+            <tr>
+                <td class="time">M4 (09:40 - 10:30)</td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+            </tr>
+            <tr>
+                <td class="time">M5 (10:40 - 11:30)</td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+            </tr>
+            <tr>
+                <td class="time">M6 (11:30 - 12:20)</td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+                <td class="morning"></td>
+            </tr>
+            <tr>
+                <td class="time">T1 (12:30 - 13:20)</td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+            </tr>
+            <tr>
+                <td class="time">T2 (13:20 - 14:10)</td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+            </tr>
+            <tr>
+                <td class="time">T3 (14:20 - 15:10)</td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+            </tr>
+            <tr>
+                <td class="time">T4 (15:10 - 16:00)</td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+            </tr>
+            <tr>
+                <td class="time">T5 (16:10 - 17:00)</td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+            </tr>
+            <tr>
+                <td class="time">T6 (17:00 - 17:50)</td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+                <td class="afternoon"></td>
+            </tr>
+            <tr>
+                <td class="time">N1 (18:00 - 18:50)</td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+            </tr>
+            <tr>
+                <td class="time">N2 (18:50 - 19:40)</td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+            </tr>
+            <tr>
+                <td class="time">N3 (19:40 - 20:30)</td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+            </tr>
+            <tr>
+                <td class="time">N4 (20:30 - 21:20)</td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+            </tr>
+            <tr>
+                <td class="time">N5 (21:20 - 22:10)</td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+                <td class="night"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 
 <style>
-    table {
+    .container {
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    }
+    .table{
         border-collapse: collapse;
-        text-align: center;
     }
 
-    th, td {
-        border: 2px solid #373737;
-        padding: 3px;
+    .table > thead > tr > th {
+        border: 1px solid black;
+        padding: 5px;
+        min-width: 120px;
+        background-color: var(--primary);
+    }
+    .table > tbody > tr > td {
+        border: 1px solid black;
+        padding: 5px;
     }
 
-    .time-label {
+    .time{
         font-weight: bold;
-        background-color: var(--secondary);
     }
 
+    .morning{
+        background-color: #faf687;
+    }
+
+    .afternoon{
+        background-color: lightsalmon;
+    }
+
+    .night{
+        background-color: lightskyblue;
+    }
 </style>
