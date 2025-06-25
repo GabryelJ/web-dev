@@ -1,32 +1,18 @@
 <script>
-        let {
-                text = 'Botão',
-                type = 'button',
-                disabled = false,
-                variant = '',
-                href
-        } = $props();
+     let {
+        text = 'Botão',
+        type = 'button',
+        disabled = false,
+        variant = '',
+     } = $props();
 </script>
 
-{#if href}
-        <a
-                href={href}
-                class="button {variant}"
-                on:click
-                {disabled}
-        >
-                {text}
-        </a>
-{:else}
-        <button
-                {type}
-                class="button {variant}"
-                on:click
-                {disabled}
-        >
-                {text}
-        </button>
-{/if}
+
+
+<button {type} class="button {variant}" onclick={""} {disabled}>
+        {text}
+</button>
+
 
 <style>
     .button{
@@ -45,16 +31,6 @@
         font-weight: bold;
     }
 
-    a.button{
-            font-size: 1.1rem;
-    }
-
-    .button-card{
-            width: 100px;
-            height: 100px;
-            text-align: center;
-    }
-
     .button:disabled {
             opacity: 0.6;
             cursor: not-allowed;
@@ -68,14 +44,5 @@
         box-shadow: 0 2px 0 #ccc;
     }
 
-    .button-exit{
-            background-color: var(--exit);
-            font-weight: bold;
-            padding: 10px 10px;
-    }
-    .button-exit:hover{
-            background-color: var(--secondary);
-            transform: scale(0.94);
-    }
 
 </style>
