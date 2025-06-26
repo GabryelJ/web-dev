@@ -1,12 +1,13 @@
 <script>
 import ScheduleTable from "$lib/components/ScheduleTable.svelte";
 import Button from "$lib/components/Button.svelte";
+import StyledLink from "$lib/components/StyledLink.svelte";
 </script>
 
 
 <div class="container">
     <ScheduleTable></ScheduleTable>
-    <Button text="Voltar ao menu" type="button"/>
+    <StyledLink text="Voltar ao menu" type="button" href="/menu" />
 </div>
 
 

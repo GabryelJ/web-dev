@@ -1,19 +1,47 @@
 <script>
+    import { goto } from '$app/navigation';
+
     import Input from "$lib/components/Input.svelte";
     import Button from "$lib/components/Button.svelte";
 
+    let errorMessage = $state("");
+
     let registrationNumber = $state("");
     let password = $state("");
+
+    let loginDisabled = $derived(isEmpty(registrationNumber) || isEmpty(password));
+
+    const dataJson = [
+        { registrationNumber: "199012345678", password: "senha123" }
+    ];
 
     function isEmpty(field) {
         return field.trim() === "";
     }
 
-    let loginDisabled = $derived(isEmpty(registrationNumber) || isEmpty(password));
+    async function handleSubmit() {
+        event.preventDefault();
+
+        if (loginDisabled) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        const userFound = dataJson.find(user =>
+            user.registrationNumber === registrationNumber && user.password === password
+        );
+
+        if (userFound) {
+            alert("Login bem-sucedido!");
+            await goto('/menu');
+        } else {
+            alert("Falha no login: Matrícula ou senha incorretos.");
+        }
+    }
 
 </script>
 
-<form class="login-container">
+<form class="login-container" onsubmit={handleSubmit}>
     <div class="inputs-container">
         <Input label="Matrícula:" type="text" direction="column" labelLinkId="matricula" bind:value={registrationNumber} placeholder="Insira sua matrícula"/>
         <Input label="Senha:" type="password" direction="column" labelLinkId="senha" bind:value={password} placeholder="Insira sua senha"/>

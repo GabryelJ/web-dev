@@ -6,7 +6,7 @@ import StyledLink from "$lib/components/StyledLink.svelte";
 <div class="flex-container">
     <div class="menu">
         <StyledLink text="Grade horária docente" type="button" variant="button-card" href="/grade-horaria"></StyledLink>
-        <StyledLink text="Alunos com matrícula ativa" type="button" variant="button-card"></StyledLink>
+        <StyledLink text="Alunos com matrícula ativa" type="button" variant="button-card" href="/alunos-ativos"></StyledLink>
         <StyledLink text="Diário de aulas" type="button" variant="button-card"></StyledLink>
         <StyledLink text="Registro de notas e faltas" type="button" variant="button-card"></StyledLink>
         <StyledLink text="Ementário" type="button" variant="button-card"></StyledLink>

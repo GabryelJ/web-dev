@@ -237,6 +237,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     }
+
     .table{
         border-collapse: collapse;
     }
@@ -247,6 +248,7 @@
         min-width: 120px;
         background-color: var(--primary);
     }
+    
     .table > tbody > tr > td {
         border: 1px solid black;
         padding: 5px;
